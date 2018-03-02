@@ -1,0 +1,7 @@
+requests
+html2text
+nltk
+collections
+pickle
+worldcloud
+matplotlib
