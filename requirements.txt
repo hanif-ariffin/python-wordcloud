@@ -1,7 +1,5 @@
 requests
 html2text
 nltk
-collections
-pickle
-worldcloud
+wordcloud
 matplotlib
