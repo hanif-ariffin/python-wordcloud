@@ -1,1 +1,4 @@
 !*.py
+*.png
+*.counts
+.vscode/
