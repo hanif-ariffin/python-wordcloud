@@ -43,11 +43,11 @@ for board in requests.get('https://a.4cdn.org/boards.json').json()['boards']:
                 print('Thread {} ({} / {})'.format(thread, index, len(threads)))
                 for post in requests.get('https://a.4cdn.org/{}/thread/{}.json'.format(board['board'], thread)).json()['posts']:
                     if 'sub' in post:
-                        text = html2text(post['sub']).lower()
+                        text = html2text(post['sub']).lower().replace("fucking", "")
                         counter.update(token for token in TOKENIZER.tokenize(
                             text) if token.isalpha())
                     if 'com' in post:
-                        text = html2text(post['com']).lower()
+                        text = html2text(post['com']).lower().replace("fucking", "")
                         counter.update(token for token in TOKENIZER.tokenize(
                             text) if token.isalpha())
 
